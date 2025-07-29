@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjeev Kumar - Digital Marketing & Design Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scroll-padding for sticky header */
+        html {
+            scroll-padding-top: 4rem; /* Adjust this value based on header height */
+        }
+        .section-padding {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
+        /* Custom styles for better aesthetics */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #6366F1, #8B5CF6); /* Indigo to Violet */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-900">Sanjeev Kumar</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
+                <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition duration-300">Experience</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-indigo-600 transition duration-300">Portfolio</a>
+                <a href="#education" class="text-gray-600 hover:text-indigo-600 transition duration-300">Education</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="hidden md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+        <div id="mobile-menu" class="hidden md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg p-6 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-700 hover:text-gray-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <nav class="flex flex-col space-y-4 mt-10">
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 transition duration-300 text-lg" onclick="closeMobileMenu()">About</a>
+                <a href="#skills" class="text-gray-700 hover:text-indigo-600 transition duration-300 text-lg" onclick="closeMobileMenu()">Skills</a>
+                <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition duration-300 text-lg" onclick="closeMobileMenu()">Experience</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-indigo-600 transition duration-300 text-lg" onclick="closeMobileMenu()">Portfolio</a>
+                <a href="#education" class="text-gray-700 hover:text-indigo-600 transition duration-300 text-lg" onclick="closeMobileMenu()">Education</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition duration-300 text-lg" onclick="closeMobileMenu()">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16"> <!-- Padding to account for fixed header -->
+
+        <!-- Hero Section -->
+        <section id="home" class="bg-gradient-to-r from-indigo-500 to-violet-600 text-white text-center py-20 md:py-32 rounded-b-xl shadow-lg mx-auto max-w-7xl mt-4 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                    Sanjeev Kumar
+                </h1>
+                <p class="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto">
+                    A Dynamic Professional in Digital Marketing, Content Creation, and Graphic Design.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#contact" class="bg-white text-indigo-700 hover:bg-indigo-50 transition duration-300 px-8 py-3 rounded-full shadow-lg font-semibold text-lg">Get in Touch</a>
+                    <a href="#portfolio" class="border-2 border-white text-white hover:bg-white hover:text-indigo-700 transition duration-300 px-8 py-3 rounded-full shadow-lg font-semibold text-lg">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding bg-white shadow-md rounded-xl mx-auto max-w-7xl mt-8 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gradient">About Me</h2>
+                <p class="text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto text-center">
+                    As a dynamic and proficient professional, I bring a strong foundation in digital marketing, content creation, and graphic design. My expertise extends to specializing in AI tools, video editing, and social media management. I am eager to leverage advanced technical skills and a keen eye for engaging content to enhance digital presence and support administrative functions. My track record demonstrates a proven ability to create impactful digital materials and manage online platforms effectively, driving significant results.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding bg-gray-50 mx-auto max-w-7xl mt-8 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">My Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Marketing & Design -->
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Marketing & Design</h3>
+                        <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                            <li>Digital Marketing: Meta Ads, Google Ads, LinkedIn Ads, SEO, PPC</li>
+                            <li>Social Media Management & Strategy</li>
+                            <li>Content Creation & Email Marketing</li>
+                            <li>Graphic Design: Canva, Adobe Creative Cloud (Presentations, Flyers, Social Media Creatives & Video Editing)</li>
+                            <li>Web Development: WordPress Website Design & Development</li>
+                            <li>Analytics: Campaign Performance Tracking, Google Analytics</li>
+                        </ul>
+                    </div>
+
+                    <!-- Office Administration -->
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Office Administration</h3>
+                        <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                            <li>Executive Support & Scheduling</li>
+                            <li>Office Automation & Management</li>
+                            <li>MS Office Suite (Word, Excel, PowerPoint)</li>
+                            <li>Google Workspace (Docs, Sheets, Slides, Gmail, Calendar)</li>
+                            <li>Record Keeping & Data Management</li>
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Soft Skills</h3>
+                        <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                            <li>Excellent Organizational & Time Management</li>
+                            <li>Exceptional Communication (Written & Verbal)</li>
+                            <li>Discretion & Confidentiality</li>
+                            <li>Proactive Problem-Solving & Critical Thinking</li>
+                            <li>Adaptability & Quick Learning</li>
+                            <li>Strong Team Player & Collaborator</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding bg-white shadow-md rounded-xl mx-auto max-w-7xl mt-8 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">Work Experience</h2>
+
+                <div class="space-y-10">
+                    <!-- Experience Item 1 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-900">Computer Academics Instructor</h3>
+                        <p class="text-indigo-600 text-lg mb-2">REACHA Foundation (NOKIA Smartpur Project) | Samba, J&K</p>
+                        <p class="text-gray-600 mb-4">December 2024 - Present</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Spearheaded comprehensive education program management, overseeing all activities and execution within the education pillar, including the development and submission of detailed program reports.</li>
+                            <li>Implemented and facilitated digital literacy programs, ensuring effective knowledge transfer and documenting outcomes for internal and external stakeholders.</li>
+                            <li>Managed educational resources, ensuring proper maintenance, security, and inventory across centers, maintaining meticulous records and contributing to operational reports.</li>
+                            <li>Developed and conducted community awareness initiatives to promote programs, effectively engaging target audiences, and prepared concise impact stories and awareness campaign reports.</li>
+                            <li>Coordinated schedules and activities across multiple centers, ensuring consistent program delivery and efficient resource utilization, and streamlined communication processes among teams.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Experience Item 2 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-900">Operational Manager (Internet Cafe)</h3>
+                        <p class="text-indigo-600 text-lg mb-2">Ai Cafe, Vijaypur (March 2024 - November 2024) | Designer's Net Cafe (May 2023 - October 2023)</p>
+                        <p class="text-gray-600 mb-4">March 2024 - November 2024 & May 2023 - October 2023</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Directed all aspects of daily cafe operations, ensuring smooth service delivery and optimal efficiency.</li>
+                            <li>Ensured high levels of customer satisfaction through proactive service and effective problem resolution.</li>
+                            <li>Managed facility upkeep, inventory of supplies, and handled financial transactions and basic reporting.</li>
+                            <li>Addressed operational challenges, customer complaints, and technical issues promptly and effectively.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio/Projects Section (Freelance Work) -->
+        <section id="portfolio" class="section-padding bg-gray-50 mx-auto max-w-7xl mt-8 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">Portfolio & Key Projects</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Digital Presence Enhancement</h3>
+                        <p class="text-indigo-600 text-lg mb-4">Freelance Web & Graphics Designing (March 2024 - Present)</p>
+                        <p class="text-gray-700 mb-4">Successfully spearheaded the launch and management of the official LinkedIn page for GGM Science College, Jammu, and currently manage the AIIMS Jammu LinkedIn page.</p>
+                        <!-- Add more details or a link to the pages if available -->
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Digital Transformation and Branding</h3>
+                        <p class="text-indigo-600 text-lg mb-4">Freelance Web & Graphics Designing (March 2024 - Present)</p>
+                        <p class="text-gray-700 mb-4">Successfully modernized Apollo Dental Clinics' online presence, resulting in increased online appointments and positive reviews.</p>
+                        <!-- Add more details or a case study if available -->
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Content Creation and Digital Publishing</h3>
+                        <p class="text-indigo-600 text-lg mb-4">Freelance Web & Graphics Designing (March 2024 - Present)</p>
+                        <p class="text-gray-700 mb-4">Utilized Google's Blogger & WordPress platform to develop and publish engaging blog posts, enhancing digital literacy and information dissemination within the local community.</p>
+                        <!-- Add links to blog posts if available -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="education" class="section-padding bg-white shadow-md rounded-xl mx-auto max-w-7xl mt-8 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">Education & Certifications</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Education -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Education</h3>
+                        <ul class="space-y-4 text-gray-700">
+                            <li>
+                                <p class="font-medium text-lg">B.Sc. (Non-Medical)</p>
+                                <p>Cluster University of Jammu | 2023 | 6.54 CGPA</p>
+                            </li>
+                            <li>
+                                <p class="font-medium text-lg">12th Grade</p>
+                                <p>JKBOSE | 2018 | 72%</p>
+                            </li>
+                            <li>
+                                <p class="font-medium text-lg">10th Grade</p>
+                                <p>JKBOSE | 2016 | 52.8%</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Certifications & Training</h3>
+                        <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                            <li>Diploma in Computer Application</li>
+                            <li>Certificate in Design Thinking from IBM SkillsBuild</li>
+                            <li>Certificate in SEO Masterclass</li>
+                            <li>Certificate in Meta Ads Masterclass</li>
+                            <li>Certificate in Google Ads Masterclass</li>
+                            <li>Certificate in Facebook Ads Masterclass</li>
+                            <li>Certificate in Google Overview Masterclass</li>
+                            <li>Certificate in Digital & AI Driven Marketing Masterclass</li>
+                            <li>Google Certification in "Introduction to Generative AI"</li>
+                            <li>Certificate in Designing IOT from NIELIT Chandigarh</li>
+                            <li>Certificate for Using Basic Formulas and Functions in Microsoft Excel</li>
+                            <li>MSME Agricultural Skill Development Programme - IIT Jammu</li>
+                            <li>MSME Bio-Entrepreneur Skill Development Programme - IIT Jammu</li>
+                            <li>Certificate in Drone Manufacturing & Assembly Technician - IIT-J</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-gray-50 mx-auto max-w-7xl mt-8 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gradient">Get in Touch</h2>
+                <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
+                    I'm always open to new opportunities and collaborations. Feel free to reach out!
+                </p>
+                <div class="flex flex-wrap justify-center gap-6 text-xl">
+                    <div class="flex items-center space-x-2 bg-white p-4 rounded-lg shadow-md">
+                        <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                        <a href="mailto:sanjeevhans701@gmail.com" class="text-gray-700 hover:text-indigo-600 transition duration-300">sanjeevhans701@gmail.com</a>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-white p-4 rounded-lg shadow-md">
+                        <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.103 6.103l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                        <a href="tel:+916005642143" class="text-gray-700 hover:text-indigo-600 transition duration-300">+91-6005642143</a>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-white p-4 rounded-lg shadow-md">
+                        <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-gray-700">Jammu, India</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-xl mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Sanjeev Kumar. All rights reserved.</p>
+            <p class="text-sm mt-2">Designed with <span class="text-red-500">&hearts;</span> using Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            mobileMenu.classList.remove('hidden');
+            mobileMenuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling on body
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenuOverlay.classList.add('hidden');
+            // Give a slight delay before hiding completely to allow animation
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = ''; // Restore scrolling on body
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        closeMobileMenuButton.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu); // Close when clicking outside menu
+
+        // Close mobile menu when a navigation link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', closeMobileMenu);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
